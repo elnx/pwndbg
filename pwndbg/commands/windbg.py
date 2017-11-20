@@ -291,6 +291,7 @@ def u(where=None, n=5):
         where = pwndbg.regs.pc
     pwndbg.commands.nearpc.nearpc(where, n)
 
+'''
 @pwndbg.commands.Command
 @pwndbg.commands.OnlyWhenRunning
 def k():
@@ -298,6 +299,7 @@ def k():
     Print a backtrace (alias 'bt')
     """
     gdb.execute('bt')
+'''
 
 @pwndbg.commands.ParsedCommand
 @pwndbg.commands.OnlyWhenRunning
