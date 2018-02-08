@@ -371,3 +371,14 @@ def pc():
     Windbg compatibility alias for 'nextcall' command.
     '''
     return pwndbg.commands.next.nextcall()
+@pwndbg.commands.Command
+@pwndbg.commands.OnlyWhenRunning
+def pa(where):
+    '''
+    Windbg pa command, continue until the addr.
+    '''
+    result = pwndbg.commands.fix(where)
+    if result is not None:
+        gdb.execute('tb *%#x' % int(result))
+        gdb.execute('continue')
+    return
