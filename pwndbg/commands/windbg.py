@@ -113,6 +113,7 @@ def enhex(size, value):
     value = value & pwndbg.arch.ptrmask
     x = "%x" % abs(value)
     x = x.rjust(size * 2, '0')
+    x = '0x' + x
     return x
 
 
