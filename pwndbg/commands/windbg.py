@@ -380,6 +380,6 @@ def pa(where):
     '''
     result = pwndbg.commands.fix(where)
     if result is not None:
-        gdb.execute('tb *%#x' % int(result))
+        gdb.execute('tbreak *%#x' % int(result))
         gdb.execute('continue')
     return
