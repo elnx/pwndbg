@@ -65,7 +65,7 @@ def format_bin(bins, verbose=False, offset=None):
 
 @pwndbg.commands.ParsedCommand
 @pwndbg.commands.OnlyWhenRunning
-def heap(addr=None):
+def pheap(addr=None):
     """
     Prints out chunks starting from the address specified by `addr`.
     """
